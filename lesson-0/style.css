@@ -1,0 +1,39 @@
+:root {
+	--primary-color: #4b92cf;
+	--black-color: #0e0e0e;
+	--gary-color: #1c1c1c;
+	--white-color: #d7d7d7;
+}
+
+body {
+	background-color: var(--black-color);
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.page {
+	padding: 20px;
+	background-color: var(--gary-color);
+	box-shadow: 0 0 10px var(--primary-color);
+	border: 2px solid var(--primary-color);
+	border-radius: 30px;
+	color: var(--white-color);
+	text-align: center;
+}
+
+.page__content p:first-child {
+	margin: 0 auto;
+	width: 500px;
+	font-size: 24px;
+}
+
+.page__content p:last-child {
+	margin: 30px 0 10px 0;
+	font-size: 32px;
+	font-style: italic;
+}
