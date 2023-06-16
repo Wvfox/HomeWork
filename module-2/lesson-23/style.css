@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.block {
+	padding: 50px 100px;
+}
+.block__image {
+	height: 50vh;
+	box-shadow: 0 0 15px #333;
+}
+.--first {
+	background: url('./first.jpg') center / contain no-repeat,
+		linear-gradient(to right, #59effa 0%, #0b3163 100%);
+}
+.--second {
+	background-image: url('./second.jpg'),
+		linear-gradient(to right, #333399 0%, #660066 100%);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
