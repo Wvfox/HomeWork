@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Тестирую формы</title>
+	</head>
+	<body>
+		<form>
+			<fieldset>
+				<legend>Мои данные</legend>
+				<label>
+					Мое имя
+					<input type="text" name="my-name" />
+				</label>
+				<label>
+					Город отправки
+					<select name="city">
+						<option value="">--Не выбрано--</option>
+						<option value="Moscow">Москва</option>
+						<option value="Ryazan">Рязань</option>
+						<option value="Kolomna">Коломна</option>
+						<option value="Voskresensk">Воскресенск</option>
+					</select>
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Данные питомца</legend>
+				<label for="#name-animal">Имя питомца</label>
+				<input type="text" name="name-animal" id="name-animal" />
+			</fieldset>
+			<button type="reset">Сбросить данные</button>
+			<button type="submit">Отправить данные</button>
+		</form>
+	</body>
+</html>
