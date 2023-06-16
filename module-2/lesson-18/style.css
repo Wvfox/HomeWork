@@ -1,0 +1,19 @@
+html,
+body {
+	height: 100%;
+	line-height: 1;
+	font-size: 16px;
+	background-color: #333;
+	color: #fff;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.block {
+	font-size: 44px;
+}
