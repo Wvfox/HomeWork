@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #333;
+	color: #fff;
+}
+
+h1 {
+	font-size: 52px;
+	animation: text-blinking 3s infinite;
+}
+
+@keyframes text-blinking {
+	0%,
+	100% {
+		color: #fff;
+	}
+	50% {
+		color: #710;
+	}
+}
