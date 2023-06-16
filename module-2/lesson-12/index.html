@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Тег input</title>
+	</head>
+	<body>
+		<form>
+			<fieldset>
+				<legend>Заполняем форму доставки</legend>
+				<label>
+					Имя
+					<input type="text" />
+				</label>
+				<br />
+				<label>
+					Фамилия
+					<input type="text" />
+				</label>
+				<br />
+				<label>
+					Телефон
+					<input type="tel" />
+				</label>
+				<br />
+				<label>
+					Почта
+					<input type="email" />
+				</label>
+				<br />
+				<label>
+					Дата доставки со временем
+					<input type="datetime-local" />
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Выберете количество огурцов для доставки</legend>
+				<label>
+					<input type="radio" name="number of cucumbers" />
+					1 огурец
+				</label>
+				<br />
+				<label>
+					<input type="radio" name="number of cucumbers" />
+					2 огурца
+				</label>
+				<br />
+				<label>
+					<input type="radio" name="number of cucumbers" />
+					3 огурца
+				</label>
+			</fieldset>
+			<input type="reset" />
+			<input type="submit" />
+		</form>
+	</body>
+</html>
