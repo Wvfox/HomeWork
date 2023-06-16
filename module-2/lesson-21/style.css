@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'Yellowtail';
+	font-weight: 400;
+	font-style: normal;
+	src: local('Yellowtail'),
+		url('./fonts/Yellowtail-Regular.woff2') format('woff2'),
+		url('./fonts/Yellowtail-Regular.woff') format('woff'),
+		url('./fonts/Yellowtail-Regular.eot') format('eot');
+	font-display: swap;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 5vh;
+	background-color: #333;
+	color: #fff;
+}
+
+.font-1 {
+	font-family: 'Marck Script', cursive;
+	font-size: 4rem;
+}
+
+.font-2 {
+	font-family: 'Yellowtail', sans-serif;
+	font-size: 3rem;
+	letter-spacing: 4px;
+}
