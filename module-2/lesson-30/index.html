@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Пробую Hover</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.wrapper {
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #333;
+				color: #fff;
+			}
+			.menu {
+				list-style: none;
+			}
+			.menu__item {
+				margin: 20px;
+				padding: 10px;
+				font-size: 36px;
+				cursor: pointer;
+				transition: all 1s ease;
+			}
+			.--first:hover {
+				color: red;
+			}
+			.--second:hover {
+				transform: rotate(180deg);
+			}
+			.--third:hover {
+				transform: scale(2);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<ul class="menu">
+				<li class="menu__item --first">1 пункт меню</li>
+				<li class="menu__item --second">2 пункт меню</li>
+				<li class="menu__item --third">3 пункт меню</li>
+			</ul>
+		</div>
+	</body>
+</html>
