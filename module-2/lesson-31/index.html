@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Псевдо элементы</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.wrapper {
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #333;
+				color: #fff;
+			}
+			.title {
+				padding: 20px;
+				position: relative;
+				display: flex;
+				align-items: center;
+				font-size: 52px;
+			}
+			.title:before {
+				content: '';
+				width: 16px;
+				height: 16px;
+				position: absolute;
+				left: -16px;
+				background-color: #000;
+				border-bottom: 4px solid #710;
+				border-right: 4px solid #710;
+				transform: rotate(45deg);
+			}
+			.title:after {
+				content: '';
+				width: 16px;
+				height: 16px;
+				position: absolute;
+				right: -16px;
+				background-color: #000;
+				border-bottom: 4px solid #380;
+				border-right: 4px solid #380;
+				transform: rotate(225deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1 class="title">Hello World!</h1>
+		</div>
+	</body>
+</html>
