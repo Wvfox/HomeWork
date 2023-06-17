@@ -28,13 +28,13 @@
 				cursor: pointer;
 				transition: all 1s ease;
 			}
-			.--first:hover {
+			.menu__item:first-child:hover {
 				color: red;
 			}
-			.--second:hover {
+			.menu__item:nth-child(2):hover {
 				transform: rotate(180deg);
 			}
-			.--third:hover {
+			.menu__item:last-child:hover {
 				transform: scale(2);
 			}
 		</style>
@@ -42,9 +42,9 @@
 	<body>
 		<div class="wrapper">
 			<ul class="menu">
-				<li class="menu__item --first">1 пункт меню</li>
-				<li class="menu__item --second">2 пункт меню</li>
-				<li class="menu__item --third">3 пункт меню</li>
+				<li class="menu__item">1 пункт меню</li>
+				<li class="menu__item">2 пункт меню</li>
+				<li class="menu__item">3 пункт меню</li>
 			</ul>
 		</div>
 	</body>
