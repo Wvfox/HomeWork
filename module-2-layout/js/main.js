@@ -49,3 +49,19 @@ if (rating) {
 		}
 	}
 }
+
+const videoBtn = document.querySelector('.header__play')
+if (videoBtn) {
+	const video = document.querySelector('.popup--video')
+
+	videoBtn.addEventListener('click', e => {
+		video.classList.add('popup--show')
+	})
+	document.addEventListener('keydown', e => {
+		if (e.code === 'Escape') {
+			video.classList.remove('popup--show')
+			const videoSrc = document.querySelector('.video__src')
+			videoSrc.pause()
+		}
+	})
+}
