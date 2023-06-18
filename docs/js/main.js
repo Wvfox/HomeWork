@@ -47,17 +47,47 @@ const videoBtn = document.querySelector('.header__play')
 if (videoBtn) {
 	const video = document.querySelector('.popup--video')
 	const videoSrc = document.querySelector('.video__src')
-	let show = false
 
 	videoBtn.addEventListener('click', e => {
 		video.classList.add('popup--show')
-		show = true
 	})
 	document.addEventListener('keydown', e => {
-		if (e.code === 'Escape' && show) {
+		if (e.code === 'Escape' && video.classList.contains('popup--show')) {
 			videoSrc.pause()
 			video.classList.remove('popup--show')
-			show = false
 		}
 	})
 }
+
+/* ========= Mixitup ========== */
+var mixer = mixitup('.blog__list')
+
+var blogButtonsBox = document.querySelector('.blog__buttons')
+if (blogButtonsBox) {
+	blogButtonsBox.addEventListener('click', e => {
+		if (e.target.classList.contains('blog__mode')) {
+			blogButtonsBox.querySelectorAll('.blog__mode').forEach(mode => {
+				mode.classList.remove('blog__mode--active')
+			})
+			e.target.classList.add('blog__mode--active')
+
+			e.preventDefault()
+		}
+	})
+}
+
+/* ========= Swiper ========== */
+const swiper = new Swiper('.swiper', {
+	loop: true,
+	simulateTouch: false,
+	slidesPerView: 2,
+	spaceBetween: '48',
+
+	pagination: {
+		el: '.swiper-pagination',
+	},
+	navigation: {
+		nextEl: '.customers__slide-arrow--next',
+		prevEl: '.customers__slide-arrow--prev',
+	},
+})

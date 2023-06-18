@@ -75,3 +75,19 @@ if (blogButtonsBox) {
 		}
 	})
 }
+
+/* ========= Swiper ========== */
+const swiper = new Swiper('.swiper', {
+	loop: true,
+	simulateTouch: false,
+	slidesPerView: 2,
+	spaceBetween: '48',
+
+	pagination: {
+		el: '.swiper-pagination',
+	},
+	navigation: {
+		nextEl: '.customers__slide-arrow--next',
+		prevEl: '.customers__slide-arrow--prev',
+	},
+})
