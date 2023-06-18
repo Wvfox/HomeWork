@@ -47,17 +47,14 @@ const videoBtn = document.querySelector('.header__play')
 if (videoBtn) {
 	const video = document.querySelector('.popup--video')
 	const videoSrc = document.querySelector('.video__src')
-	let show = false
 
 	videoBtn.addEventListener('click', e => {
 		video.classList.add('popup--show')
-		show = true
 	})
 	document.addEventListener('keydown', e => {
-		if (e.code === 'Escape' && show) {
+		if (e.code === 'Escape' && video.classList.contains('popup--show')) {
 			videoSrc.pause()
 			video.classList.remove('popup--show')
-			show = false
 		}
 	})
 }
