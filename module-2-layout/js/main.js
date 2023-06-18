@@ -58,3 +58,20 @@ if (videoBtn) {
 		}
 	})
 }
+
+/* ========= Mixitup ========== */
+var mixer = mixitup('.blog__list')
+
+var blogButtonsBox = document.querySelector('.blog__buttons')
+if (blogButtonsBox) {
+	blogButtonsBox.addEventListener('click', e => {
+		if (e.target.classList.contains('blog__mode')) {
+			blogButtonsBox.querySelectorAll('.blog__mode').forEach(mode => {
+				mode.classList.remove('blog__mode--active')
+			})
+			e.target.classList.add('blog__mode--active')
+
+			e.preventDefault()
+		}
+	})
+}
