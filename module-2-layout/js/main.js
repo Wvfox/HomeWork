@@ -5,7 +5,6 @@ if (rating) {
 	// Инициализация рейтинга
 	function initRating(rating) {
 		initRatingVars(rating)
-
 		setRatingActiveWidth()
 
 		if (rating.classList.contains('rating--set')) {
@@ -25,43 +24,40 @@ if (rating) {
 	}
 	// Возможность указания оценки
 	function setRating(rating) {
-		const ratingItems = rating.querySelectorAll('.rating__item')
-		for (let index = 0; index < ratingItems.length; index++) {
-			const ratingItem = ratingItems[index]
-			ratingItem.addEventListener('mouseenter', e => {
-				// Обновление переменных
-				initRatingVars(rating)
+		rating.addEventListener('mousemove', e => {
+			if (e.target.classList.contains('rating__item')) {
 				// Обновление активных звезд
-				setRatingActiveWidth(ratingItem.value)
-			})
-			ratingItem.addEventListener('mouseleave', e => {
-				// Обновление активных звезд
+				setRatingActiveWidth(e.target.value)
+			} else {
+				// Возвращение первоначальную ширину активных звезд
 				setRatingActiveWidth()
-			})
-			ratingItem.addEventListener('click', e => {
-				// Обновление переменных
-				initRatingVars(rating)
-
+			}
+		})
+		rating.addEventListener('click', e => {
+			if (e.target.classList.contains('rating__item')) {
 				// Отобразить указанную оценку
-				ratingValue.innerHTML = `${index + 1}.0`
+				ratingValue.innerHTML = `${e.target.value}.0`
 				setRatingActiveWidth()
-			})
-		}
+			}
+		})
 	}
 }
 
 const videoBtn = document.querySelector('.header__play')
 if (videoBtn) {
 	const video = document.querySelector('.popup--video')
+	const videoSrc = document.querySelector('.video__src')
+	let show = false
 
 	videoBtn.addEventListener('click', e => {
 		video.classList.add('popup--show')
+		show = true
 	})
 	document.addEventListener('keydown', e => {
-		if (e.code === 'Escape') {
-			video.classList.remove('popup--show')
-			const videoSrc = document.querySelector('.video__src')
+		if (e.code === 'Escape' && show) {
 			videoSrc.pause()
+			video.classList.remove('popup--show')
+			show = false
 		}
 	})
 }
