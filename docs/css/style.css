@@ -8,6 +8,8 @@
 
 	--background-color-section-blue: #e2e6e9;
 	--background-color-section-gray: #f2f2f2;
+	--background-color-footer-light: rgba(30, 27, 27, 0.98);
+	--background-color-footer-dark: #1e1b1b;
 }
 
 html,
@@ -34,6 +36,9 @@ body {
 .logo svg {
 	fill: var(--color-text);
 	transition: all 0.3s ease;
+}
+.logo:hover svg {
+	fill: var(--color-primary);
 }
 .button {
 	display: inline-block;
@@ -105,9 +110,6 @@ body {
 }
 .header__logo {
 	margin: 0 40px 0 0;
-}
-.header__logo:hover svg {
-	fill: var(--color-primary);
 }
 .header__head-content {
 	display: flex;
@@ -320,10 +322,8 @@ body {
 	height: 100%;
 }
 
-/* ==================================================== */
-/* ====================== MAIN ======================== */
-
-/* ========== OFFER ============= */
+/* ========================================================= */
+/* ======================== OFFER ========================== */
 .offer {
 	text-align: center;
 }
@@ -387,7 +387,8 @@ body {
 	fill: var(--color-primary);
 }
 
-/* ========== SERVICE ============= */
+/* ========================================================= */
+/* ======================= SERVICE ========================= */
 .service {
 }
 .service__container {
@@ -405,11 +406,12 @@ body {
 	max-width: 430px;
 }
 .service__content {
+	margin: 0 130px 0 0;
 }
 .service__list {
 }
 .service__item {
-	margin: 0 190px 16px 0;
+	margin: 0 auto 16px 0;
 }
 .service__item-head {
 	display: flex;
@@ -454,7 +456,8 @@ body {
 	bottom: 0;
 	left: 0;
 }
-/* ========== WITH-US ============= */
+/* ========================================================= */
+/* ======================= WITH-US ========================= */
 .with-us {
 	width: 100%;
 	background: url('../img/with-us/with-us-bg.jpg') center / auto 100% no-repeat;
@@ -475,7 +478,8 @@ body {
 .with-us__button {
 }
 
-/* ========= STATISTIC ========== */
+/* =========================================================== */
+/* ======================= STATISTIC ========================= */
 .statistic {
 }
 .statistic__list {
@@ -501,8 +505,8 @@ body {
 	line-height: 36px;
 	letter-spacing: -0.03em;
 }
-
-/* ========= BRAND ============ */
+/* =========================================================== */
+/* ========================= BRAND =========================== */
 .brand {
 }
 .brand__title {
@@ -520,7 +524,8 @@ body {
 	transform: scale(1.2);
 }
 
-/* ========== BLOG ============= */
+/* =========================================================== */
+/* ========================= BLOG ============================ */
 .blog {
 }
 .blog__title {
@@ -568,7 +573,8 @@ body {
 	line-height: 28px;
 }
 
-/* ======== CUSTOMERS ========= */
+/* =========================================================== */
+/* ====================== CUSTOMERS ========================== */
 .customers {
 }
 .customers__title {
@@ -635,7 +641,6 @@ body {
 .customers__slide-arrow--prev {
 	margin: 0 24px 0 0;
 }
-
 /* === SWIPER === */
 .swiper {
 	width: 100%;
@@ -644,10 +649,245 @@ body {
 	transform: translateY(-50%);
 }
 .swiper-pagination-bullet {
+	padding: 15px 0;
 	width: 32px;
 	height: 4px;
 	border-radius: 0;
+	background-color: transparent;
+	opacity: 1;
+	position: relative;
 }
-.swiper-pagination-bullet-active {
+.swiper-pagination-bullet::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 4px;
+	width: 100%;
+	background-color: #939191;
+}
+.swiper-pagination-bullet-active::before {
 	background-color: var(--color-primary);
+}
+
+/* =========================================================== */
+/* ====================== Question ========================== */
+.question__title {
+	margin: 0 0 86px;
+}
+.question__spoilers {
+	margin: 0 auto;
+	max-width: 900px;
+}
+.spoilers {
+}
+.spoilers__item {
+	margin: 0 0 12px;
+	padding: 22px 40px;
+	background-color: var(--color-white);
+}
+.spoilers__title {
+	padding: 16px 0;
+	width: 100%;
+	background-color: var(--color-white);
+	color: var(--color-text);
+	font-size: 24px;
+	line-height: 36px;
+	letter-spacing: -0.03em;
+	text-align: left;
+	position: relative;
+	transition: color 0.3s ease;
+}
+.spoilers__title:hover {
+	color: var(--color-primary);
+}
+.spoilers.spoiler--init .spoilers__title {
+	cursor: pointer;
+}
+.spoilers.spoiler--init .spoilers__title::after,
+.spoilers.spoiler--init .spoilers__title::before {
+	content: '';
+	width: 52px;
+	height: 48px;
+	position: absolute;
+	top: 8px;
+	right: 0;
+	transition: transform 0.3s ease 0s;
+}
+.spoilers.spoiler--init .spoilers__title::before {
+	background: url('../img/icons/minus.svg') center / 30% no-repeat,
+		var(--color-primary);
+}
+.spoilers.spoiler--init .spoilers__title::after {
+	background: url('../img/icons/minus.svg') center / 30% no-repeat;
+	transform: rotate(-90deg);
+}
+.spoilers.spoiler--init .spoiler--active:after {
+	transform: rotate(0deg);
+}
+
+.spoilers__content {
+	margin: 0 0 16px;
+	max-width: 700px;
+	color: var(--color-gray);
+}
+
+/* =========================================================== */
+/* ====================== Feedback ========================== */
+.feedback {
+	margin: 0 0 400px;
+}
+.feedback__title {
+	margin: 0 0 48px;
+	max-width: 500px;
+}
+.feedback__container {
+	display: flex;
+	gap: 140px;
+}
+.feedback__form {
+	display: flex;
+	flex-direction: column;
+}
+.feedback__form-input {
+	padding: 22px 40px;
+	display: block;
+	background-color: var(--background-color-section-gray);
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 28px;
+}
+.feedback__form-input::placeholder {
+	color: var(--color-gray);
+}
+.feedback__form-input:not(:last-child) {
+	margin: 0 0 4px 0;
+}
+.feedback__form-footer {
+	margin: 48px 0 0;
+	display: flex;
+	align-items: center;
+}
+.feedback__btn {
+	margin: 0 40px 0 0;
+}
+.feedback__footer-label {
+	display: flex;
+	align-items: center;
+}
+.feedback__input-default {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+}
+.feedback__check {
+	margin: 0 5px 0 0;
+	height: 16px;
+	width: 16px;
+	display: block;
+	border: 1px solid var(--color-text);
+	border-radius: 3px;
+}
+.feedback__input-default:checked + .feedback__check {
+	background: url('../img/icons/check.svg') 50% no-repeat var(--color-primary);
+	border: 1px solid var(--color-primary);
+}
+.feedback__info {
+}
+.feedback__info-item {
+	margin: 0 0 32px;
+}
+.feedback__item-title {
+	color: var(--color-gray);
+	line-height: 28px;
+}
+.feedback__item-description {
+	font-size: 24px;
+	line-height: 36px;
+	letter-spacing: -0.03em;
+}
+
+/* =========================================================== */
+/* ========================= Map =========================== */
+.map {
+	margin: -344px auto -168px;
+	width: 1280px;
+	height: 512px;
+	filter: grayscale(1);
+}
+
+/* =========================================================== */
+/* ======================== Footer ========================== */
+.footer {
+	color: var(--color-white);
+}
+.footer__head-img {
+	overflow: hidden;
+}
+.footer__body {
+	background: var(--background-color-footer-light);
+}
+.footer__body-container {
+	display: flex;
+}
+.footer__content {
+	margin: 0 194px 0 0;
+	max-width: 464px;
+}
+.footer__title {
+	margin: 0 0 64px 0;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 140%;
+}
+.footer__social-list {
+	display: flex;
+	gap: 24px;
+}
+.footer__social-link {
+	fill: var(--color-white);
+	transition: fill 0.3s ease;
+}
+.footer__social-link:hover {
+	fill: var(--color-primary);
+}
+.footer__info-item {
+	margin: 0 0 32px 0;
+}
+.footer__item-title {
+	margin: 0 0 8px 0;
+	color: var(--color-gray);
+	font-size: 18px;
+}
+.footer__item-description {
+	font-size: 24px;
+	line-height: 36px;
+	letter-spacing: -0.03em;
+}
+.footer__footer {
+	background: var(--background-color-footer-dark);
+}
+.footer__footer-container {
+	padding: 64px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.footer__logo svg {
+	fill: var(--color-white);
+}
+.footer__nav-list {
+	display: flex;
+	gap: 36px;
+}
+.footer__nav-link {
+	transition: color 0.3s ease;
+}
+.footer__nav-link:hover {
+	color: var(--color-primary);
+}
+.footer__copyright {
+	color: var(--color-gray);
 }
