@@ -320,10 +320,8 @@ body {
 	height: 100%;
 }
 
-/* ==================================================== */
-/* ====================== MAIN ======================== */
-
-/* ========== OFFER ============= */
+/* ========================================================= */
+/* ======================== OFFER ========================== */
 .offer {
 	text-align: center;
 }
@@ -387,7 +385,8 @@ body {
 	fill: var(--color-primary);
 }
 
-/* ========== SERVICE ============= */
+/* ========================================================= */
+/* ======================= SERVICE ========================= */
 .service {
 }
 .service__container {
@@ -405,11 +404,12 @@ body {
 	max-width: 430px;
 }
 .service__content {
+	margin: 0 130px 0 0;
 }
 .service__list {
 }
 .service__item {
-	margin: 0 190px 16px 0;
+	margin: 0 auto 16px 0;
 }
 .service__item-head {
 	display: flex;
@@ -454,7 +454,8 @@ body {
 	bottom: 0;
 	left: 0;
 }
-/* ========== WITH-US ============= */
+/* ========================================================= */
+/* ======================= WITH-US ========================= */
 .with-us {
 	width: 100%;
 	background: url('../img/with-us/with-us-bg.jpg') center / auto 100% no-repeat;
@@ -475,7 +476,8 @@ body {
 .with-us__button {
 }
 
-/* ========= STATISTIC ========== */
+/* =========================================================== */
+/* ======================= STATISTIC ========================= */
 .statistic {
 }
 .statistic__list {
@@ -501,8 +503,8 @@ body {
 	line-height: 36px;
 	letter-spacing: -0.03em;
 }
-
-/* ========= BRAND ============ */
+/* =========================================================== */
+/* ========================= BRAND =========================== */
 .brand {
 }
 .brand__title {
@@ -520,7 +522,8 @@ body {
 	transform: scale(1.2);
 }
 
-/* ========== BLOG ============= */
+/* =========================================================== */
+/* ========================= BLOG ============================ */
 .blog {
 }
 .blog__title {
@@ -568,7 +571,8 @@ body {
 	line-height: 28px;
 }
 
-/* ======== CUSTOMERS ========= */
+/* =========================================================== */
+/* ====================== CUSTOMERS ========================== */
 .customers {
 }
 .customers__title {
@@ -635,7 +639,6 @@ body {
 .customers__slide-arrow--prev {
 	margin: 0 24px 0 0;
 }
-
 /* === SWIPER === */
 .swiper {
 	width: 100%;
@@ -644,10 +647,81 @@ body {
 	transform: translateY(-50%);
 }
 .swiper-pagination-bullet {
+	padding: 15px 0;
 	width: 32px;
 	height: 4px;
 	border-radius: 0;
+	background-color: transparent;
+	opacity: 1;
+	position: relative;
 }
-.swiper-pagination-bullet-active {
+.swiper-pagination-bullet::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 4px;
+	width: 100%;
+	background-color: #939191;
+}
+.swiper-pagination-bullet-active::before {
 	background-color: var(--color-primary);
+}
+
+/* =========================================================== */
+/* ======================  ========================== */
+.question__title {
+	margin: 0 0 86px;
+}
+.question__spoilers {
+	margin: 0 auto;
+	max-width: 900px;
+}
+.spoilers {
+}
+.spoilers__item {
+	margin: 0 0 12px;
+	padding: 22px 40px;
+	background-color: var(--color-white);
+}
+.spoilers__title {
+	padding: 16px 0;
+	width: 100%;
+	background-color: var(--color-white);
+	color: var(--color-text);
+	font-size: 24px;
+	line-height: 36px;
+	letter-spacing: -0.03em;
+	text-align: left;
+	position: relative;
+}
+.spoilers.spoiler--init .spoilers__title {
+	cursor: pointer;
+}
+.spoilers.spoiler--init .spoilers__title::after,
+.spoilers.spoiler--init .spoilers__title::before {
+	content: '';
+	width: 52px;
+	height: 48px;
+	position: absolute;
+	top: 8px;
+	right: 0;
+	transition: transform 0.3s ease 0s;
+}
+.spoilers.spoiler--init .spoilers__title::before {
+	background: url('../img/icons/minus.svg') center / 30% no-repeat,
+		var(--color-primary);
+}
+.spoilers.spoiler--init .spoilers__title::after {
+	background: url('../img/icons/minus.svg') center / 30% no-repeat;
+	transform: rotate(-90deg);
+}
+.spoilers.spoiler--init .spoiler--active:after {
+	transform: rotate(0deg);
+}
+
+.spoilers__content {
+	margin: 0 0 16px;
+	max-width: 700px;
+	color: var(--color-gray);
 }
