@@ -32,7 +32,12 @@
 								/>
 							</svg>
 						</a>
-						<div class="header__head-content">
+
+						<div class="burger__icon">
+							<span></span>
+						</div>
+
+						<div class="header__head-content burger__body">
 							<nav class="header__nav">
 								<ul class="header__nav-list">
 									<li class="header__nav-item">
@@ -854,99 +859,64 @@
 							Frequently Asked Questions
 						</h2>
 						<div class="question__spoilers">
-							<!-- Атрибут data-accordion включает/отключает режим аккордеона -->
-							<div data-spoilers data-accordion class="spoilers">
-								<div class="spoilers__item">
-									<button
-										tabindex="-1"
-										type="button"
-										data-spoiler
-										class="spoilers__title spoiler--active"
-									>
+							<!-- ==== Spoilers ==== -->
+							<ul class="spoilers" data-accordion>
+								<li class="spoilers__item spoiler--open">
+									<button class="spoilers__control" aria-expanded="false">
 										How long should a car repair take?
 									</button>
-									<div class="spoilers__content">
-										<p>
-											I have got my car repaired at Finsweet many times before,
-											they are good at what they do. Not only did they repair my
-											car I have got my car repaired at Finsweet I have got my
-											car repaired at Finsweet
-										</p>
+									<div class="spoilers__content" aria-hidden="true">
+										I have got my car repaired at Finsweet many times before,
+										they are good at what they do. Not only did they repair my
+										car I have got my car repaired at Finsweet I have got my car
+										repaired at Finsweet
 									</div>
-								</div>
-								<div class="spoilers__item">
-									<button
-										tabindex="-1"
-										type="button"
-										data-spoiler
-										class="spoilers__title"
-									>
+								</li>
+								<li class="spoilers__item">
+									<button class="spoilers__control" aria-expanded="false">
 										How do I schedule my car's appointment ?
 									</button>
-									<div class="spoilers__content">
-										<p>
-											I have got my car repaired at Finsweet many times before,
-											they are good at what they do. Not only did they repair my
-											car I have got my car repaired at Finsweet I have got my
-											car repaired at Finsweet
-										</p>
+									<div class="spoilers__content" aria-hidden="true">
+										I have got my car repaired at Finsweet many times before,
+										they are good at what they do. Not only did they repair my
+										car I have got my car repaired at Finsweet I have got my car
+										repaired at Finsweet
 									</div>
-								</div>
-								<div class="spoilers__item">
-									<button
-										tabindex="-1"
-										type="button"
-										data-spoiler
-										class="spoilers__title"
-									>
+								</li>
+								<li class="spoilers__item">
+									<button class="spoilers__control" aria-expanded="false">
 										What are the repair services provided?
 									</button>
-									<div class="spoilers__content">
-										<p>
-											I have got my car repaired at Finsweet many times before,
-											they are good at what they do. Not only did they repair my
-											car I have got my car repaired at Finsweet I have got my
-											car repaired at Finsweet
-										</p>
+									<div class="spoilers__content" aria-hidden="true">
+										I have got my car repaired at Finsweet many times before,
+										they are good at what they do. Not only did they repair my
+										car I have got my car repaired at Finsweet I have got my car
+										repaired at Finsweet
 									</div>
-								</div>
-								<div class="spoilers__item">
-									<button
-										tabindex="-1"
-										type="button"
-										data-spoiler
-										class="spoilers__title"
-									>
+								</li>
+								<li class="spoilers__item">
+									<button class="spoilers__control" aria-expanded="false">
 										How do I find auto body shops near me?
 									</button>
-									<div class="spoilers__content">
-										<p>
-											I have got my car repaired at Finsweet many times before,
-											they are good at what they do. Not only did they repair my
-											car I have got my car repaired at Finsweet I have got my
-											car repaired at Finsweet
-										</p>
+									<div class="spoilers__content" aria-hidden="true">
+										I have got my car repaired at Finsweet many times before,
+										they are good at what they do. Not only did they repair my
+										car I have got my car repaired at Finsweet I have got my car
+										repaired at Finsweet
 									</div>
-								</div>
-								<div class="spoilers__item">
-									<button
-										tabindex="-1"
-										type="button"
-										data-spoiler
-										class="spoilers__title"
-									>
+								</li>
+								<li class="spoilers__item">
+									<button class="spoilers__control" aria-expanded="false">
 										Genuine spare parts during car repair?
 									</button>
-									<div class="spoilers__content">
-										<p>
-											I have got my car repaired at Finsweet many times before,
-											they are good at what they do. Not only did they repair my
-											car I have got my car repaired at Finsweet I have got my
-											car repaired at Finsweet
-										</p>
+									<div class="spoilers__content" aria-hidden="true">
+										I have got my car repaired at Finsweet many times before,
+										they are good at what they do. Not only did they repair my
+										car I have got my car repaired at Finsweet I have got my car
+										repaired at Finsweet
 									</div>
-								</div>
-							</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</section>
