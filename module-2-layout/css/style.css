@@ -115,7 +115,7 @@ img {
 .header__logo {
 	margin: 0 40px 0 0;
 }
-.burger__icon {
+.menu__icon {
 	display: none;
 }
 .header__head-content {
@@ -984,51 +984,54 @@ img {
 	.section-title {
 		font-size: 38px;
 	}
-	.burger__icon {
-		width: 60px;
+	body.body--lock {
+		/* Отступ на величину полосы прокрутки */
+		padding-right: 17px;
+		overflow: hidden;
+	}
+	.menu {
+		position: relative;
+	}
+	.menu__icon {
 		height: 40px;
-		z-index: 5;
+		width: 60px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		position: relative;
 		cursor: pointer;
 	}
-	.burger__icon span,
-	.burger__icon:before,
-	.burger__icon:after {
-		position: absolute;
+	.menu__icon span,
+	.menu__icon span:before,
+	.menu__icon span:after {
+		display: block;
 		height: 2px;
 		width: 30px;
-		transition: all 0.3s ease 0s;
 		background-color: var(--color-text);
+		transition: all 0.3s ease;
 	}
-	.burger__icon:before,
-	.burger__icon:after {
+	.menu__icon span:before,
+	.menu__icon span:after {
 		content: '';
 	}
-	.burger__icon:before {
-		top: 20%;
+	.menu__icon span:before {
+		transform: translateY(calc(-7px * 1.2));
 	}
-	.burger__icon:after {
-		bottom: 20%;
+	.menu__icon span:after {
+		transform: translateY(7px);
 	}
-	.burger__icon span {
-		top: 50%;
-		transform: scale(1) translate(0px, -50%) translate(0px, -50%);
+	.menu__icon span {
+		transform: scale(1);
 	}
-	.burger--active.burger__icon span {
-		transform: scale(0);
+	.menu--active > span {
+		background-color: transparent;
 	}
-	.burger--active.burger__icon:before {
-		top: 50%;
-		transform: rotate(-45deg) translate(0px, -50%);
+	.menu--active > span:before {
+		transform: rotate(-45deg);
 	}
-	.burger--active.burger__icon:after {
-		bottom: 50%;
-		transform: rotate(45deg) translate(0px, 50%);
+	.menu--active > span:after {
+		transform: rotate(45deg) translateY(-2px);
 	}
-	.burger__body {
+	.menu__body {
 		padding: 80px 0 0 40px;
 		flex-direction: column;
 		align-items: start;
@@ -1044,7 +1047,7 @@ img {
 		transform: translateX(-100%);
 		transition: all 0.3s ease;
 	}
-	.burger__body::before {
+	.menu__body::before {
 		content: '';
 		position: absolute;
 		top: 76px;
@@ -1054,10 +1057,10 @@ img {
 		z-index: -1;
 		background-color: rgba(0, 0, 0, 0.97);
 	}
-	.burger__body span {
+	.menu__body span {
 		display: none;
 	}
-	.burger--active.burger__body {
+	.menu--active.menu__body {
 		opacity: 1;
 		visibility: visible;
 		transform: translateX(0%);
