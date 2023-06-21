@@ -180,7 +180,7 @@ const menuBody = document.querySelector('.menu__body')
 if (menuIcon) {
 	/* Open/close Menu-burger */
 	menuIcon.addEventListener('click', e => {
-		document.body.classList.toggle('_lock')
+		document.body.classList.toggle('body--lock')
 		menuIcon.classList.toggle('menu--active')
 		menuBody.classList.toggle('menu--active')
 	})

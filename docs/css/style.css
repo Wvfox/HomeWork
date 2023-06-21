@@ -985,8 +985,6 @@ img {
 		font-size: 38px;
 	}
 	body.body--lock {
-		/* Отступ на величину полосы прокрутки */
-		padding-right: 17px;
 		overflow: hidden;
 	}
 	.menu {
