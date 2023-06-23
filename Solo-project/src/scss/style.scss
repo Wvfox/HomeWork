@@ -226,7 +226,7 @@ img {
 	&::after {
 		content: '';
 		height: 400px;
-		background: linear-gradient(to top, rgba($gray, 0.15), transparent);
+		background: linear-gradient(to top, rgba($gray, 0.3), transparent);
 		position: absolute;
 		bottom: 0;
 		right: 0;
@@ -277,5 +277,160 @@ img {
 		opacity: 0.8;
 	}
 	&__button {
+	}
+}
+
+//==========================================================
+//=======================UTILITY============================
+
+.utility {
+	padding: 32px 70px;
+	background: $white;
+	border-radius: 0 0 75px 75px;
+	&__title {
+		text-align: center;
+		transform: translateX(-15px);
+	}
+	&__container {
+		display: flex;
+		gap: 40px;
+	}
+	&__block {
+		margin: 80px 0 0 0;
+		flex: 1 0 465px;
+	}
+	&__block-title {
+		margin: 0 0 10px 0;
+		background-color: $black;
+		background-image: $gradient;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-size: 28px;
+		line-height: 1.2;
+		text-transform: uppercase;
+	}
+	&__block-description {
+		color: $black;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 1.05;
+	}
+	&__media {
+		max-height: 532px;
+		position: relative;
+		span {
+			color: #818181;
+			font-size: 24px;
+			line-height: 1.2;
+			position: absolute;
+			left: 50%;
+			bottom: 13%;
+			opacity: 0.4;
+			transform: translateX(-54%);
+		}
+	}
+}
+
+//==========================================================
+//==========================PASS============================
+
+.pass {
+	&__container {
+		padding: 116px 0 54px;
+		display: flex;
+		gap: 64px;
+	}
+	&__media {
+		flex: 1 0 478px;
+		border-radius: 26px;
+		overflow: hidden;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			bottom: 10px;
+			left: 10px;
+			border-radius: 26px;
+			border: 2px solid $bg-color;
+			opacity: 0.4;
+		}
+	}
+	&__content {
+	}
+	&__title {
+		margin: 0 0 27px 0;
+		font-size: 54px;
+		line-height: 1.1;
+		text-transform: uppercase;
+	}
+	&__description {
+		@include gradient-text-gray;
+		font-size: 32px;
+		line-height: 1.4;
+	}
+}
+
+//==========================================================
+//=========================CATALOG===========================
+
+.catalog {
+	background-color: $catalog-bg-color;
+	position: relative;
+	&__head {
+		width: 100%;
+		display: flex;
+		gap: 100px;
+		position: absolute;
+		top: 100px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -26px;
+			left: 0;
+			width: 453px;
+			height: 4px;
+			background-color: $white;
+		}
+	}
+	&__mode {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		background-color: transparent;
+		color: $white;
+		fill: $white;
+		font-size: 32px;
+		line-height: 1ю875;
+		text-transform: uppercase;
+	}
+	&__body {
+		display: flex;
+	}
+	&__content {
+		padding: 190px 0 80px;
+		flex: 0 0 100vw;
+		font-size: 24px;
+		line-height: 1.8;
+		p,
+		li {
+			@include gradient-text-gray;
+			max-width: 1040px;
+		}
+	}
+	&__content--vision {
+		background: url('../img/utility/vision-bg.jpg') 75% / auto 100% no-repeat;
+
+		p:not(:last-child) {
+			margin: 0 0 16px 0;
+		}
+	}
+	&__content--perks {
+	}
+	&__perks-list {
+	}
+	&__perks-item {
 	}
 }
