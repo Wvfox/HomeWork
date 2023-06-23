@@ -1,5 +1,7 @@
 /solo-project/node_modules
 /solo-project/dist
 
+/.vscode
+
 /screenshots
 /reports

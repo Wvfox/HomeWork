@@ -303,6 +303,7 @@ img {
 		margin: 0 0 10px 0;
 		background-color: $black;
 		background-image: $gradient;
+		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		font-size: 28px;
