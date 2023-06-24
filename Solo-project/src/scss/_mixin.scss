@@ -1,0 +1,10 @@
+@mixin gradient-text-gray {
+	background-image: linear-gradient(
+		to bottom,
+		rgba($white, 0.9),
+		rgba($white, 0.6)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 400;
+}
