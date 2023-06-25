@@ -8,3 +8,10 @@
 	-webkit-text-fill-color: transparent;
 	font-weight: 400;
 }
+
+@mixin gradient-text-purple-blue {
+	background-image: linear-gradient(to right, #ef2dff, #4672ff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 900;
+}

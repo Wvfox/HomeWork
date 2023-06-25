@@ -18,14 +18,9 @@ export function swiperSliders() {
 	})
 	const developmentSlider = new Swiper('.swiper--development', {
 		simulateTouch: true,
-		freeMode: {
-			enabled: true,
-			momentumBounceRatio: 0.5,
-			momentumRatio: 0.5,
-			momentumVelocityRatio: 0.5,
-		},
+		freeMode: true,
 		spaceBetween: 24,
-		slidesPerView: 5.4,
+		slidesPerView: 2.8,
 
 		// breakpoints: {
 		// 	992: {
