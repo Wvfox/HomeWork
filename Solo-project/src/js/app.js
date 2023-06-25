@@ -1,3 +1,9 @@
-import * as Functions from './modules/functions.js'
+import { catalogFunction } from './modules/catalog.js'
+import { spoilersFunction } from './modules/spoilers.js'
+import { swiperSliders } from './modules/swiper.js'
+import * as testWebp from './modules/testWebp.js'
 
-Functions.isWebp()
+testWebp.isWebp()
+swiperSliders()
+spoilersFunction()
+catalogFunction()

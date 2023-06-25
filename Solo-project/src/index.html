@@ -75,6 +75,39 @@
 							<li class="header__brand-item">
 								<img src="./img/header/brand-5.svg" alt="" />
 							</li>
+							<li class="header__brand-item">
+								<img src="./img/header/brand-1.svg" alt="" />
+							</li>
+							<li class="header__brand-item">
+								<img src="./img/header/brand-2.svg" alt="" />
+							</li>
+							<li class="header__brand-item">
+								<img src="./img/header/brand-3.svg" alt="" />
+							</li>
+							<li class="header__brand-item">
+								<img src="./img/header/brand-4.svg" alt="" />
+							</li>
+							<li class="header__brand-item">
+								<img src="./img/header/brand-5.svg" alt="" />
+							</li>
+							<li class="header__brand-item">
+								<img src="./img/header/brand-1.svg" alt="" />
+							</li>
+							<li class="header__brand-item">
+								<img src="./img/header/brand-2.svg" alt="" />
+							</li>
+							<li class="header__brand-item">
+								<img src="./img/header/brand-3.svg" alt="" />
+							</li>
+							<li class="header__brand-item">
+								<img src="./img/header/brand-4.svg" alt="" />
+							</li>
+							<li class="header__brand-item">
+								<img src="./img/header/brand-5.svg" alt="" />
+							</li>
+							<li class="header__brand-item">
+								<img src="./img/header/brand-1.svg" alt="" />
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -132,26 +165,58 @@
 
 			<section class="partner">
 				<h2 class="partner__title section__title">Partners</h2>
-				<ul class="partner__list">
-					<li class="partner__item">
-						<img src="./img/partners/partners-1.png" height="79px" alt="" />
-					</li>
-					<li class="partner__item">
-						<img src="./img/partners/partners-2.png" height="65px" alt="" />
-					</li>
-					<li class="partner__item">
-						<img src="./img/partners/partners-3.png" height="34px" alt="" />
-					</li>
-					<li class="partner__item">
-						<img src="./img/partners/partners-4.png" alt="" />
-					</li>
-					<li class="partner__item">
-						<img src="./img/partners/partners-5.png" alt="" />
-					</li>
-					<li class="partner__item">
-						<img src="./img/partners/partners-6.png" alt="" />
-					</li>
-				</ul>
+				<div class="swiper swiper--partner">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide partner__item">
+							<img
+								src="./img/partners/partners-1.png"
+								class="partner__logo"
+								height="79px"
+								alt=""
+							/>
+						</div>
+						<div class="swiper-slide partner__item">
+							<img
+								src="./img/partners/partners-2.png"
+								class="partner__logo"
+								height="65px"
+								alt=""
+							/>
+						</div>
+						<div class="swiper-slide partner__item">
+							<img
+								src="./img/partners/partners-3.png"
+								class="partner__logo"
+								height="65px"
+								alt=""
+							/>
+						</div>
+						<div class="swiper-slide partner__item">
+							<img
+								src="./img/partners/partners-4.png"
+								class="partner__logo"
+								height="65px"
+								alt=""
+							/>
+						</div>
+						<div class="swiper-slide partner__item">
+							<img
+								src="./img/partners/partners-5.png"
+								class="partner__logo"
+								height="65px"
+								alt=""
+							/>
+						</div>
+						<div class="swiper-slide partner__item">
+							<img
+								src="./img/partners/partners-6.png"
+								class="partner__logo"
+								height="65px"
+								alt=""
+							/>
+						</div>
+					</div>
+				</div>
 			</section>
 
 			<section class="whitelist whitelist--orange">
@@ -258,7 +323,7 @@
 			<section class="catalog">
 				<div class="container">
 					<div class="catalog__head">
-						<button class="catalog__mode">
+						<button class="catalog__mode catalog__mode--active">
 							<svg
 								width="63"
 								height="23"
@@ -360,7 +425,7 @@
 									reality development and design.
 								</li>
 							</ul>
-							<p>
+							<p class="catalog__perks-description">
 								As a Platinum NFT member, you'll enjoy all of these perks and
 								more, including the ability to shape the future of the RINE
 								metaverse through your feedback and collaboration. Join our
@@ -368,6 +433,15 @@
 								reality!
 							</p>
 						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="development">
+				<h2 class="development__title section__title">development</h2>
+				<div class="swiper swiper--development">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide development__item"></div>
 					</div>
 				</div>
 			</section>
@@ -432,6 +506,91 @@
 
 			<section class="faq">
 				<h2 class="faq__title section__title">FAQ</h2>
+				<!-- ==== Spoilers ==== -->
+				<ul class="spoilers" data-accordion>
+					<li class="spoilers__item">
+						<button class="spoilers__control" aria-expanded="false">
+							What is RINE VR?
+						</button>
+						<div class="spoilers__content" aria-hidden="true">
+							RINE VR is a virtual reality platform that allows users to
+							explore, create, and connect in a metaverse environment.
+						</div>
+					</li>
+					<li class="spoilers__item">
+						<button class="spoilers__control" aria-expanded="false">
+							What devices are compatible with RINE VR?
+						</button>
+						<div class="spoilers__content" aria-hidden="true">
+							Currently, RINE VR is compatible with Oculus Quest 2 and Oculus
+							Quest Pro.
+						</div>
+					</li>
+					<li class="spoilers__item">
+						<button class="spoilers__control" aria-expanded="false">
+							How do I access RINE VR?
+						</button>
+						<div class="spoilers__content" aria-hidden="true">
+							You can access RINE VR by downloading the app from the Oculus
+							store.
+						</div>
+					</li>
+					<li class="spoilers__item">
+						<button class="spoilers__control" aria-expanded="false">
+							Is RINE VR free to use?
+						</button>
+						<div class="spoilers__content" aria-hidden="true">
+							Yes, RINE VR is free to use. However, some features may require a
+							subscription or additional payment.
+						</div>
+					</li>
+					<li class="spoilers__item spoiler--open">
+						<button class="spoilers__control" aria-expanded="false">
+							What kind of experiences are available on RINE VR?
+						</button>
+						<div class="spoilers__content" aria-hidden="true">
+							RINE VR offers a range of experiences, including social
+							gatherings, creative tools, and entertainment events.
+						</div>
+					</li>
+					<li class="spoilers__item">
+						<button class="spoilers__control" aria-expanded="false">
+							Can I create my own content on RINE VR?
+						</button>
+						<div class="spoilers__content" aria-hidden="true">
+							Yes, RINE VR provides a set of creative tools that allow users to
+							design and customise their own virtual spaces.
+						</div>
+					</li>
+					<li class="spoilers__item">
+						<button class="spoilers__control" aria-expanded="false">
+							Is there a community aspect to RINE VR?
+						</button>
+						<div class="spoilers__content" aria-hidden="true">
+							Yes, RINE VR has a strong community aspect with opportunities to
+							connect with like-minded individuals and participate in events and
+							activities.
+						</div>
+					</li>
+					<li class="spoilers__item">
+						<button class="spoilers__control" aria-expanded="false">
+							What is the Platinum NFT membership?
+						</button>
+						<div class="spoilers__content" aria-hidden="true">
+							The Platinum NFT membership is a premium membership that provides
+							exclusive access to certain features and events on RINE VR.
+						</div>
+					</li>
+					<li class="spoilers__item">
+						<button class="spoilers__control" aria-expanded="false">
+							How can I become a Platinum NFT member?
+						</button>
+						<div class="spoilers__content" aria-hidden="true">
+							You can become a Platinum NFT member by purchasing the Platinum
+							NFT on the RINE website or through a supported NFT marketplace.
+						</div>
+					</li>
+				</ul>
 			</section>
 
 			<section class="talk">
@@ -439,6 +598,8 @@
 				<form class="talk__form"></form>
 			</section>
 		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 		<script src="js/app.min.js"></script>
 	</body>
 </html>
