@@ -16,8 +16,23 @@ export function anchorFunction() {
 						top: topValue,
 						behavior: 'smooth',
 					})
-					e.preventDefault()
 				}
+				// Добавления якоря для логотипа
+				else if (
+					e.target.parentElement.dataset.anchor &&
+					document.querySelector(e.target.parentElement.dataset.anchor)
+				) {
+					const topValue =
+						document
+							.querySelector(e.target.parentElement.dataset.anchor)
+							.getBoundingClientRect().top + scrollY
+
+					window.scrollTo({
+						top: topValue,
+						behavior: 'smooth',
+					})
+				}
+				e.preventDefault()
 			})
 		})
 	}
