@@ -1,0 +1,88 @@
+//==========================================================
+//=======================CREATE=============================
+
+.create {
+	margin-top: -40px;
+	position: relative;
+	z-index: +1;
+	@media only screen and (min-width: 1921px) {
+		margin: -40px auto 0;
+		width: 1920px;
+	}
+	&__container {
+		padding: 88px 0 194px;
+		background: $white;
+		border-radius: 75px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		@media only screen and (max-width: 1560px) {
+			border-radius: 0;
+		}
+		@media only screen and (max-width: 1320px) {
+			padding-bottom: 120px;
+		}
+		@media only screen and (max-width: 992px) {
+			padding-bottom: 100px;
+		}
+		@media only screen and (max-width: 768px) {
+			padding-bottom: 80px;
+		}
+	}
+	&__title {
+	}
+	&__description {
+		color: $black;
+		text-align: center;
+		font-size: 42px;
+		line-height: 1.4;
+		text-transform: uppercase;
+		@media only screen and (max-width: 1320px) {
+			font-size: 32px;
+		}
+		@media only screen and (max-width: 992px) {
+			font-size: 24px;
+		}
+		@media only screen and (max-width: 768px) {
+			font-size: 20px;
+		}
+		@media only screen and (max-width: 480px) {
+			font-size: 16px;
+		}
+	}
+	&__media {
+		border-radius: 50%;
+		position: absolute;
+		bottom: -124px;
+		overflow: hidden;
+		@media only screen and (max-width: 1320px) {
+			bottom: -100px;
+			img {
+				width: 200px;
+				height: 200px;
+			}
+		}
+		@media only screen and (max-width: 992px) {
+			bottom: -80px;
+			img {
+				width: 160px;
+				height: 160px;
+			}
+		}
+		@media only screen and (max-width: 768px) {
+			bottom: -60px;
+			img {
+				width: 140px;
+				height: 140px;
+			}
+		}
+		@media only screen and (max-width: 480px) {
+			img {
+				width: 120px;
+				height: 120px;
+			}
+		}
+	}
+}

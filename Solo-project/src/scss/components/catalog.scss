@@ -1,0 +1,186 @@
+//==========================================================
+//=========================CATALOG===========================
+
+.catalog {
+	background-color: $catalog-bg-color;
+	position: relative;
+	z-index: +1;
+	&__head {
+		margin-left: -20px;
+		width: 100%;
+		display: flex;
+		gap: 60px;
+		position: absolute;
+		z-index: +1;
+		top: 100px;
+		left: 15vw;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0px;
+			left: 20px;
+			width: 453px;
+			height: 4px;
+			background-color: $white;
+		}
+		@media only screen and (max-width: 1560px) {
+			top: 80px;
+			left: 0;
+			justify-content: center;
+			&:after {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+		@media only screen and (max-width: 992px) {
+			&:after {
+				width: 410px;
+			}
+		}
+		@media only screen and (max-width: 768px) {
+			&:after {
+				width: 400px;
+			}
+		}
+		@media only screen and (max-width: 480px) {
+			margin: 0;
+			left: 0;
+			right: 0;
+			justify-content: center;
+			gap: 20px;
+		}
+	}
+	&__mode {
+		padding: 20px;
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		background-color: transparent;
+		color: $gray;
+		fill: $gray;
+		font-size: 32px;
+		text-transform: uppercase;
+		transition: all 0.3s ease;
+		&--active {
+			color: $white;
+			fill: $white;
+		}
+		&:hover {
+			color: $purple;
+			fill: $purple;
+		}
+		@media only screen and (max-width: 992px) {
+			font-size: 24px;
+		}
+		@media only screen and (max-width: 768px) {
+			font-size: 20px;
+		}
+		@media only screen and (max-width: 480px) {
+			padding: 10px;
+			font-size: 18px;
+			svg {
+				width: 70%;
+			}
+		}
+	}
+	&__body {
+		display: flex;
+		transition: all 0.8s ease-in-out;
+		&--switch {
+			transform: translateX(-100vw);
+		}
+	}
+	&__content {
+		padding: 200px 15vw 80px;
+		flex: 0 0 100vw;
+		font-size: 24px;
+		line-height: 1.8;
+		p,
+		li {
+			@include gradient-text-gray;
+			max-width: 1040px;
+		}
+		@media only screen and (max-width: 1560px) {
+			padding: 190px 30px 0px;
+			p {
+				max-width: 100%;
+				text-align: center;
+			}
+		}
+		@media only screen and (max-width: 992px) {
+			font-size: 20px;
+		}
+		@media only screen and (max-width: 768px) {
+			font-size: 16px;
+		}
+	}
+	&__media {
+		display: none;
+		@media only screen and (max-width: 1560px) {
+			display: block;
+			height: 800px;
+			display: flex;
+			justify-content: center;
+			img {
+				height: 100%;
+			}
+		}
+		@media only screen and (max-width: 992px) {
+			height: 600px;
+		}
+		@media only screen and (max-width: 768px) {
+			height: 340px;
+		}
+		@media only screen and (max-width: 480px) {
+			height: 240px;
+		}
+	}
+	&__content--vision {
+		position: relative;
+		background: url('../img/utility/vision-bg.png') 60vw / auto 100% no-repeat;
+		p:not(:last-child) {
+			margin: 0 0 16px 0;
+		}
+		@media only screen and (max-width: 1560px) {
+			background: none;
+		}
+	}
+	&__content--perks {
+		padding-top: 200px;
+		background: url('../img/utility/perks-bg.png') 60vw / auto 100% no-repeat;
+		@media only screen and (max-width: 1560px) {
+			background: none;
+		}
+		@media only screen and (max-width: 768px) {
+			.catalog__media {
+				margin-top: 40px;
+				height: 440px;
+			}
+		}
+		@media only screen and (max-width: 480px) {
+			.catalog__media {
+				margin-top: 100px;
+				height: 300px;
+			}
+		}
+	}
+	&__perks-list {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+	&__perks-item {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		&::before {
+			content: '';
+			width: 11px;
+			height: 11px;
+			background: $gray;
+		}
+	}
+	&__perks-description {
+		margin-top: 24px;
+	}
+}
