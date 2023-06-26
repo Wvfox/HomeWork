@@ -131,11 +131,14 @@
 	&__item-title {
 		@include gradient-text-purple-blue;
 		margin: 72px 0 18px;
-		font-size: 29px;
+		font-size: 26px;
 		line-height: 1.2;
 		letter-spacing: 2px;
 		@media only screen and (max-width: 480px) {
 			font-size: 20px;
+		}
+		@media only screen and (max-width: 340px) {
+			font-size: 16px;
 		}
 	}
 	&__item-description {
