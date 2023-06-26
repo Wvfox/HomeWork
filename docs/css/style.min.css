@@ -1663,12 +1663,18 @@ body.body--lock {
 }
 @media only screen and (max-width: 480px) {
   .development__item-media {
-    width: 240px;
-    height: 180px;
+    width: auto;
+    height: 100%;
   }
   .development__item-media img {
     width: 100%;
     height: 100%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .development__item-media {
+    width: auto;
+    height: 50%;
   }
 }
 .development__item-number {
@@ -1709,7 +1715,7 @@ body.body--lock {
 }
 @media only screen and (max-width: 480px) {
   .development__item-number {
-    top: 160px;
+    top: 180px;
     font-size: 24px;
     width: 74px;
     height: 74px;
@@ -1717,6 +1723,11 @@ body.body--lock {
   .development__item-number::before {
     width: 80px;
     height: 80px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .development__item-number {
+    top: 160px;
   }
 }
 .development__item-title {
