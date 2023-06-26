@@ -368,9 +368,10 @@
 				visibility: visible;
 			}
 			&__body {
-				padding: 160px 0 0;
+				padding: 100px 0;
 				width: 100%;
 				flex-direction: column;
+
 				background-color: rgba($black, 0.95);
 				position: fixed;
 				top: 0;
@@ -379,13 +380,15 @@
 				z-index: 9;
 				opacity: 0;
 				visibility: hidden;
+				overflow-y: auto;
 				transition: all 0.3s ease;
 				a {
-					font-size: 42px;
+					padding: 30px;
+					font-size: 32px;
 				}
 				@media only screen and (max-width: 480px) {
 					a {
-						font-size: 32px;
+						font-size: 24px;
 					}
 				}
 			}

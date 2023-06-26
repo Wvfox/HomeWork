@@ -833,7 +833,7 @@ body.body--lock {
     visibility: visible;
   }
   .header .menu__body {
-    padding: 160px 0 0;
+    padding: 100px 0;
     width: 100%;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.95);
@@ -844,15 +844,17 @@ body.body--lock {
     z-index: 9;
     opacity: 0;
     visibility: hidden;
+    overflow-y: auto;
     transition: all 0.3s ease;
   }
   .header .menu__body a {
-    font-size: 42px;
+    padding: 30px;
+    font-size: 32px;
   }
 }
 @media only screen and (max-width: 1320px) and (max-width: 480px) {
   .header .menu__body a {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 

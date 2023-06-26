@@ -70,64 +70,7 @@
 		</div>
 
 		<div id="popup-whitelist" class="popup">
-			<div class="popup__container">
-				<div class="popup__head">
-					Join the Whitelist
-					<span class="popup__close"></span>
-				</div>
-				<div class="popup__body">
-					<section class="talk">
-						<form class="talk__form">
-							<ul class="talk__form-list">
-								<li class="talk__form-item">
-									<input type="text" placeholder="Name" class="talk__input" />
-								</li>
-								<li class="talk__form-item">
-									<input
-										type="email"
-										placeholder="Email address*"
-										class="talk__input"
-										required
-									/>
-								</li>
-								<li class="talk__form-item">
-									<input
-										type="text"
-										placeholder="Telegram username*"
-										class="talk__input"
-										required
-									/>
-								</li>
-								<li class="talk__form-item">
-									<input
-										type="text"
-										placeholder="Subject*"
-										class="talk__input"
-										required
-									/>
-								</li>
-								<li class="talk__form-item">
-									<input
-										type="text"
-										placeholder="Socials (website/ twitter etc.)*"
-										class="talk__input"
-										required
-									/>
-								</li>
-								<li class="talk__form-item">
-									<input
-										type="text"
-										placeholder="Message*"
-										class="talk__input"
-										required
-									/>
-								</li>
-							</ul>
-							<button class="talk__from-submit button">Submit</button>
-						</form>
-					</section>
-				</div>
-			</div>
+			@@include('html/components/popup-whitelist.html')
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
