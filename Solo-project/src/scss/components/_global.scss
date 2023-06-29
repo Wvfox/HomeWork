@@ -84,9 +84,11 @@
 		transition: all 0.3s ease;
 	}
 	&::before {
+		opacity: 1;
 		background: $gradient;
 	}
 	&::after {
+		top: -1px;
 		opacity: 0;
 		background: $bg-color;
 	}
@@ -245,6 +247,7 @@
 .decor {
 	position: relative;
 	z-index: 0;
+	pointer-events: none;
 	&:before {
 		content: '';
 		width: 5000px;
